@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Wkhtmltopdf.NetCore;
 
 namespace service.html2pdfconverter
 {
@@ -26,6 +27,7 @@ namespace service.html2pdfconverter
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddWkhtmltopdf();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
